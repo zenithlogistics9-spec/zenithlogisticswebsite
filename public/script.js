@@ -1,0 +1,10 @@
+document.addEventListener('DOMContentLoaded',()=>{
+const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('.nav-links');
+if(menu&&nav)menu.addEventListener('click',()=>nav.classList.toggle('open'));
+const langBtns=document.querySelectorAll('[data-lang]');
+let lang=localStorage.getItem('zenith-lang')||'fr';
+function apply(l){lang=l;document.documentElement.lang=l;localStorage.setItem('zenith-lang',l);document.querySelectorAll('[data-fr][data-en]').forEach(el=>{el.textContent=el.dataset[l]});langBtns.forEach(b=>b.classList.toggle('active',b.dataset.lang===l))}
+langBtns.forEach(b=>b.addEventListener('click',()=>apply(b.dataset.lang)));apply(lang);
+const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));
+document.querySelectorAll('form.quote-form').forEach(form=>form.addEventListener('submit',async e=>{e.preventDefault();const status=form.querySelector('.form-status');if(status)status.textContent=lang==='fr'?'Envoi en cours…':'Sending…';try{const r=await fetch('/api/quote',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))});const d=await r.json();if(!r.ok)throw new Error(d.message);if(status)status.textContent=lang==='fr'?'Merci. Votre demande a été envoyée.':'Thank you. Your request has been sent.';form.reset()}catch(err){if(status)status.textContent=lang==='fr'?'Impossible d’envoyer. Appelez-nous ou écrivez-nous.':'Unable to send. Please call or email us.'}}));
+});
