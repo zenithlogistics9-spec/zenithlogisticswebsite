@@ -6,3 +6,12 @@
 /* WhatsApp brand button */
 .whatsapp{font-size:0!important;background:#25D366!important;color:#fff!important;display:grid!important;place-items:center!important;border-radius:50%!important;box-shadow:0 10px 28px rgba(0,0,0,.22)!important}
 .whatsapp::before{content:"";width:27px;height:27px;background-repeat:no-repeat;background-position:center;background-size:contain;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.009-.372-.011-.57-.011-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.004 21.5h-.004a9.5 9.5 0 0 1-4.844-1.327l-.347-.206-3.603.945.961-3.512-.226-.36A9.494 9.494 0 0 1 2.5 12C2.5 6.762 6.762 2.5 12 2.5S21.5 6.762 21.5 12 17.238 21.5 12.004 21.5m8.085-17.589A11.36 11.36 0 0 0 12.004.56C5.723.56.613 5.67.61 11.95a11.32 11.32 0 0 0 1.518 5.674L.514 23.52l6.033-1.583A11.38 11.38 0 0 0 12 23.44h.005c6.279 0 11.389-5.11 11.392-11.39a11.32 11.32 0 0 0-3.308-8.139'/%3E%3C/svg%3E")}
+
+/* Final official-logo treatment */
+.zt-logo{display:flex!important;align-items:center!important;justify-content:center!important;min-width:104px!important}
+.zt-logo img{width:96px!important;height:82px!important;object-fit:contain!important;object-position:center!important;background:transparent!important;border-radius:0!important;display:block!important}
+.zt-footer-logo{width:108px!important;height:108px!important;object-fit:contain!important;object-position:center!important;background:transparent!important;border-radius:0!important;display:block!important}
+@media(max-width:800px){
+  .zt-logo{min-width:88px!important}
+  .zt-logo img{width:84px!important;height:72px!important}
+}
