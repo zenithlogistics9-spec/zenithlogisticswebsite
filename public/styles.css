@@ -23,3 +23,6 @@ main{position:relative}
 .zt-hero-bg{inset:0!important;z-index:1!important;background:linear-gradient(90deg,rgba(1,31,67,.96) 0%,rgba(2,41,84,.82) 36%,rgba(2,36,74,.25) 67%)!important;animation:none!important}
 @media(max-width:600px){.zt-hero-video-global{height:760px}}
 @media(prefers-reduced-motion:reduce){.zt-hero-video-global{display:none}.zt-hero{background:#001d3d url('/assets/hero-cargo-airplane-poster.jpg') center/cover no-repeat}}
+
+/* Homepage customs service image */
+.zt-card-photo.p5{background-image:url('/assets/customs-homepage.webp')!important;background-position:center 38%}
